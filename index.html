@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurthy&Anam English Academy - Master English Today</title>
+    <meta name="description" content="Join Aurthy&Anam English Academy for expert English training. Apply now and pay 500 taka to start your journey.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Free icons -->
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: #333; 
+            perspective: 1200px; /* Enhanced 3D perspective */
+            overflow-x: hidden;
+        }
+        header { 
+            background: linear-gradient(45deg, #007bff, #0056b3); 
+            color: white; 
+            text-align: center; 
+            padding: 40px 20px; 
+            position: relative; 
+            transform: rotateX(3deg) rotateY(2deg); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+            transition: transform 0.6s ease; 
+        }
+        header:hover { 
+            transform: rotateX(0deg) rotateY(0deg) scale(1.05); 
+        }
+        header h1 { 
+            margin: 0; 
+            font-size: 2.5em; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+        }
+        header p { 
+            font-size: 1.2em; 
+            margin: 10px 0; 
+        }
+        nav { 
+            background: rgba(0,0,0,0.1); 
+            padding: 10px; 
+            text-align: center; 
+        }
+        nav a { 
+            color: white; 
+            margin: 0 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: color 0.3s; 
+        }
+        nav a:hover { 
+            color: #ffd700; 
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background: white; 
+            border-radius: 15px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+            transform-style: preserve-3d; 
+        }
+        section { 
+            margin-bottom: 40px; 
+            padding: 20px; 
+            border-radius: 10px; 
+            background: #f9f9f9; 
+            transform: translateZ(10px); 
+        }
+        h2 { 
+            color: #007bff; 
+            text-align: center; 
+            margin-bottom: 20px; 
+            font-size: 2em; 
+        }
+        .hero { 
+            text-align: center; 
+            padding: 50px 20px; 
+            background: url('https://picsum.photos/1200/400?random=1') no-repeat center/cover; 
+            color: white; 
+            border-radius: 10px; 
+            transform: translateZ(20px); 
+        }
+        .hero h2 { 
+            font-size: 3em; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7); 
+        }
+        .courses { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: space-around; 
+        }
+        .course { 
+            background: white; 
+            padding: 20px; 
+            margin: 10px; 
+            border-radius: 10px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            width: 30%; 
+            text-align: center; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            transform: translateZ(5px); 
+        }
+        .course:hover { 
+            transform: translateY(-10px) rotateY(5deg) scale(1.05); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2); 
+        }
+        .course i { 
+            font-size: 3em; 
+            color: #007bff; 
+            margin-bottom: 10px; 
+        }
+        .testimonials { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: space-around; 
+        }
+        .testimonial { 
+            background: white; 
+            padding: 20px; 
+            margin: 10px; 
+            border-radius: 10px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            width: 45%; 
+            text-align: center; 
+            transform: translateZ(5px); 
+        }
+        form { 
+            display: flex; 
+            flex-direction: column; 
+            max-width: 600px; 
+            margin: 0 auto; 
+        }
+        label { 
+            margin-top: 15px; 
+            font-weight: bold; 
+        }
+        input, textarea { 
+            padding: 12px; 
+            margin-top: 5px; 
+            border: 2px solid #ccc; 
+            border-radius: 8px; 
+            transition: transform 0.3s ease, border-color 0.3s ease; 
+        }
+        input:focus, textarea:focus { 
+            border-color: #007bff; 
+            transform: translateY(-2px) rotateX(1deg); 
+            box-shadow: 0 5px 15px rgba(0,123,255,0.2); 
+        }
+        button { 
+            background: linear-gradient(45deg, #28a745, #20c997); 
+            color: white; 
+            padding: 12px; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            margin-top: 20px; 
+            font-size: 1.1em; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            transform: translateZ(10px); 
+        }
+        button:hover { 
+            transform: translateY(-8px) rotateY(5deg) scale(1.1); 
+            box-shadow: 0 10px 25px rgba(40,167,69,0.4); 
+        }
+        .payment { 
+            margin-top: 20px; 
+            padding: 15px; 
+            background: #e9ecef; 
+            border-radius: 10px; 
+            opacity: 0; 
+            transform: translateY(50px) rotateX(10deg); 
+            transition: opacity 0.6s ease, transform 0.6s ease; 
+        }
+        .payment.show { 
+            opacity: 1; 
+            transform: translateY(0) rotateX(0deg); 
+        }
+        .contact { 
+            margin-top: 20px; 
+            padding: 15px; 
+            background: #d4edda; 
+            border-radius: 10px; 
+            display: none; 
+            opacity: 0; 
+            transform: translateY(50px) rotateY(10deg); 
+            transition: opacity 0.6s ease, transform 0.6s ease; 
+        }
+        .contact.show { 
+            display: block; 
+            opacity: 1; 
+            transform: translateY(0) rotateY(0deg); 
+        }
+        footer { 
+            background: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 40px; 
+        }
+        footer a { 
+            color: #007bff; 
+            text-decoration: none; 
+        }
+        .message { 
+            display: none; 
+            padding: 10px; 
+            margin-top: 10px; 
+            border-radius: 5px; 
+            text-align: center; 
+        }
+        .success { 
+            background: #d4edda; 
+            color: #155724; 
+        }
+        .error { 
+            background: #f8d7da; 
+            color: #721c24; 
+        }
+        @media (max-width: 768px) { 
+            .courses, .testimonials { 
+                flex-direction: column; 
+            } 
+            .course, .testimonial { 
+                width: 100%; 
+            } 
+            header h1 { 
+                font-size: 2em; 
+            } 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-graduation-cap"></i> Aurthy&Anam English Academy</h1>
+        <p>Master English with Expert Guidance</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#apply">Apply</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="home" class="hero">
+            <h2>Welcome to Excellence in English Learning</h2>
+            <p>Join thousands of students mastering English with our personalized courses.</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Aurthy&Anam English Academy is dedicated to providing top-notch English training in Bangladesh. Our expert instructors ensure you achieve fluency and confidence.</p>
+        </section>
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <div class="courses">
+                <div class="course">
+                    <i class="fas fa-book"></i>
+                    <h3>Beginner English</h3>
+                    <p>Start from basics with interactive lessons.</p>
+                </div>
+                <div class="course">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Intermediate Speaking</h3>
+                    <p>Improve conversation skills for real-life use.</p>
+                </div>
+                <div class="course">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Advanced Writing</h3>
+                    <p>Master grammar and professional writing.</p>
+                </div>
+            </div>
+        </section>
+        <section id="testimonials">
+            <h2>What Our Students Say</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Amazing academy! I improved my English in just 3 months."</p>
+                    <cite>- Student A</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"The teachers are fantastic and the courses are engaging."</p>
+                    <cite>- Student B</cite>
+                </div>
+            </div>
+        </section>
+        <section id="apply">
+            <h2>Apply Now</h2>
+            <p>Fill out the form and pay 500 taka to join our academy.</p>
+            <form id="applicationForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required min="10" max="100">
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <button type="submit">Submit Application</button>
+            </form>
+            <div id="message" class="message"></div>
+            
+            <div class="payment" id="paymentSection">
+                <h3>Payment Instructions</h3>
+                <p>Pay 500 taka to confirm your application:</p>
+                <ul>
+                    <li><strong>Bkash/Nagad:</strong> Send to +8801760645683. Reference: Your Name.</li>
+                    <li><strong>Credit Card:</strong> Use Stripe link (integrate later) or contact us.</li>
+                </ul>
+                <p>After payment, click below to confirm.</p>
+                <button onclick="confirmPayment()">Confirm Payment</button>
+            </div>
+            
+            <div class="contact" id="contactSection">
+                <h3>Contact Information</h3>
+                <p>Contact with this number: +8801760645683</p>
+            </div>
+        </section>
+    </div>
+    <footer id="contact">
+        <p>&copy; 2023 Aurthy&Anam English Academy. All rights reserved.</p>
+        <p>Contact us at <a href="tel:+8801760645683">+8801760645683</a> | Email: info@aurthyanamacademy.com</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form validation and submission
+        document.getElementById('applicationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const age = document.getElementById('age').value;
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message');
+            
+            if (!name || !address || !age || !phone) {
+                message.textContent = 'Please fill in all fields.';
+                message.className = 'message error';
+                message.style.display = 'block';
+                return;
+            }
+            if (age < 10 || age > 100) {
+                message.textContent = 'Please enter a valid age.';
+                message.className = 'message error';
+                message.style.display = 'block';
+                return;
+            }
+            
+            message.textContent = 'Application submitted successfully! Proceed to payment.';
+            message.className = 'message success';
+            message.style.display = 'block';
+            const paymentSection = document.getElementById('paymentSection');
+            paymentSection.classList.add('show');
+        });
+
+        // Confirm payment and show contact
+        function confirmPayment() {
+            const contactSection = document.getElementById('contactSection');
+            contactSection.classList.add('show');
+            document.getElementById('message').textContent = 'Payment confirmed. Welcome to Aurthy&Anam English Academy!';
+            document.getElementById('message').className = 'message success';
+        }
+    </script>
+</body>
+</html>
